@@ -10,3 +10,6 @@ Thumbs.db
 # Temp
 tmp/
 *.tmp
+
+# MCP 뉴런 (Claude Max 체제 전환 후 미사용)
+memory.jsonl

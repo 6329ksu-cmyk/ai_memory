@@ -5,6 +5,10 @@
 
 ## 2026-04
 
+- [Claude Code] Network Manager P0 Risk Exposure v3: healthScore 전체 cap 60 제거 + 개별 cap 60% 축소. 방치/보통/깨끗 FG 자연 분포(0~40 / 50~75 / 90+). `src/utils/cleanup/health-score.js` 1파일. 빌드 525.84 kB.
+- [Claude Code] Network Manager P1 예외대장 설계·검증: 9개 UTM 실측(scripts/analyze-samples.mjs)으로 "NAC/DLP 예외" 원래 가설 기각. Risk Exposure 탐지는 정상 작동 중. 실제 critical 40+건은 관리포트 노출·비즈니스 외부공개·본사관리대역 등. P1 ⏸️보류, 사람 판정 리스트 확보를 재개 선행조건으로 지정. AI_JOURNAL G-001·PROJECT_STATE v8·뉴런(Network_Manager_Project) 기록.
+- [Claude Code] AI_Memory 정리: `.bak-*` 3개 삭제. `memory.jsonl` 삭제(Claude Max 전환 후 타 agent 미사용) + gitignore 추가. `session_archives/_backlog.md`에 sync-rules.sh .bak 방지, MCP 서버 비활성화, AI_JOURNAL 글로벌 승격, CLAUDE.md 슬림화 기록.
+- [Claude Code] AI_Memory git repo 전환: `C:\AI_Memory\` git init + remote `github.com/6329ksu-cmyk/ai_memory` 연결. 집↔회사 sync용. 첫 커밋에 기존 자산(SHARED_RULES, memory.jsonl 등) + `session_archives/2026-04-16_설계회의록.md` 포함. push 완료.
 - [Claude Code] bus환승 Plan 1 Task 6: apps/mobile Expo SDK 51 스캐폴딩 (package.json, tsconfig.json, babel.config.js, app.config.ts). pnpm install 완료. 커밋 2개.
 - [Claude Code] bus환승 Plan 1 Task 4: Hono /health 엔드포인트 TDD 구현 (app.ts, routes/health.ts, index.ts, test/health.test.ts). 커밋 2개.
 - [Claude Code] install-kit 구축: G드라이브 AI_Memory/install-kit/ 아래 install.ps1, README.md, 검수-지시서.md 생성. 홈랩/회사 환경 자동 감지, dev-prompts 선택 복사, sync-rules.sh 자동 호출.
